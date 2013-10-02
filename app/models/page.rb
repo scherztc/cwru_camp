@@ -5,5 +5,6 @@ class Page < ActiveFedora::Base
 
   delegate :number, to: 'descMetadata', unique: :true
   delegate :text, to: 'descMetadata', unique: :true
-  
+
+  has_file_datastream "pageContent"  
 end
